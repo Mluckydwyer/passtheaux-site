@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Avenir LT Light";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/resources/fonts/AvenirLT/AvenirLTStd-Light.otf");
+}
+
+@font-face {
+    font-family: "Avenir LT Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/resources/fonts/AvenirLT/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+    font-family: "Avenir LT Medium Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/resources/fonts/AvenirLT/AvenirLTStd-MediumOblique.otf");
+}
+
+@font-face {
+    font-family: "Avenir LT Heavy";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/resources/fonts/AvenirLT/AvenirLTStd-Heavy.otf");
+}
+
+html, body {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hide {
+    display: none !important;
+    opacity: 0;
+    margin: 0 !important;
+    visibility: hidden !important;
+}
+
+.page-container {
+    min-width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* ----- General Header */
+
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 0 2vw 0 0;
+}
+
+.shrink {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-list {
+    list-style: none;
+    display: inline;
+}
+
+.header-list > li {
+    display: inline;
+}
+
+#right-header-links {
+    display: grid;
+    list-style: none;
+    margin: 0 1.5vw 0;
+}
+
+/* Header Page Links */
+
+.header-link {
+    display: block;
+    text-decoration: none;
+    float: right;
+    padding: .5vw 1.5vw .5vw 1.5vw;
+    margin-top: 2.5vh;
+    font-family: "Avenir LT Light", Arial, "Trebuchet MS", sans-serif;
+    font-size: larger;
+    text-transform: capitalize;
+    color: #A9A9A9;
+    white-space: nowrap;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.header-link:hover {
+    color: #8C34D4;
+}
+
+.header-link-button {
+    color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    background: #8C34D4;
+    cursor: pointer;
+    padding-left: .75vw;
+    padding-right: .75vw;
+}
+
+.header-link-button:hover {
+    color: #FFFFFF;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .22);
+}
+
+/* Header Social Media Logos */
+
+.link-icon {
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+    display: block;
+    float: right;
+    margin-top: 2.5vh;
+    font-size: x-large;
+    color: #A9A9A9;
+    transition: all .25s ease;
+}
+
+.link-icon > svg {
+    padding: 0;
+    transition: all .25s ease;
+}
+
+.social-tooltip .social-tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #363636;
+    color: #8C34D4;
+    font-family: "Avenir LT Light", Arial, "Trebuchet MS", sans-serif;
+    font-size: medium;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.social-tooltip .social-tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: solid 5px;
+    border-color: transparent transparent black transparent;
+}
+
+.social-tooltip:hover .social-tooltip-text {
+    visibility: hidden;
+}
+
+/* Header Auxeo Logo */
+
+.header-logo {
+    display: block;
+    text-decoration: none;
+    background-size: contain !important;
+    padding: 20px;
+}
+
+#header-auxeo-logo {
+    float: left;
+    background: transparent url("/resources/images/AuxeoLogo.png") center top no-repeat;
+    background-size: contain !important;
+    width: 256px;
+    height: 93px;
+}
+
+/* Page Content */
+
+.content {
+    margin: 0;
+    padding-top: 0;
+}
+
+.page-section {
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Footer */
+
+.footer {
+    background: rgba(255, 160, 0, .91);
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    position: static;
+    bottom: 0;
+    font-family: "Avenir LT Light", Arial, "Trebuchet MS", sans-serif;
+    font-size: medium;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    display: inline-flex;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all .15s ease;
+}
+
+.footer-link:hover {
+    color: #8C34D4;
+}
+
+.footer-list {
+    list-style: none;
+    display: inline;
+    margin-bottom: 0;
+}
+
+.footer-logo {
+    background: transparent url("/resources/images/AuxeoLogo.png") center top no-repeat;
+    background-size: contain !important;
+    width: 192px;
+    height: 69px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#footer-social-icons {
+    display: table-footer-group;
+}
+
+.link-icon[id*="footer"] {
+    color: #FFFFFF;
+    margin-top: 0;
+    padding-top: .5vh;
+}
+
+.footer-list-item {
+    margin: 1vh 0 1vh 0;
+}
+
+.footer-list-item#copyright, .footer-list-item#footer-title {
+    margin: 1vh 0 1vh 0;
+}

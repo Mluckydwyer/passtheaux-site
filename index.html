@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!--  General Head  -->
+    <link href="resources/css/general.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="resources/images/Icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200, 300,300i,400,400i&display=swap"
+          rel="stylesheet">
+    <!--<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>-->
+    <script type="text/javascript" src="resources/js/anime.js"></script>
+    <script type="text/javascript" src="resources/js/StickyHeader.js"></script>
+    <script type="text/javascript" src="resources/js/Animation.js"></script>
+    <script type="text/javascript" src="resources/js/PageLogic.js"></script>
+    <!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <!--  Homepage Head  -->
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <title>Pass The Aux | Get the party started!</title>
+</head>
+<body>
+<div class="page-container">
+    <div class="content" id="home">
+        <div class="page-section page-focus-container" id="page-section-face">
+            <div id="mainText" class="main-section-text">
+                <span id="title" class="section-title">Pass The Aux</span>
+                <h3 id="subtitle" class="section-subtitle">Click, Play, Jam! 🎉</h3>
+                <!--<h1 class="ml6">-->
+                  <!--<span class="text-wrapper">-->
+                    <!--&lt;!&ndash;<span class="letters">Click, Play, Jam! 🎉</span>&ndash;&gt;-->
+                  <!--</span>-->
+                <!--</h1>-->
+                <input id="partyCodeEnter" class="text-input hide" name="partyID" placeholder="Party Code" type="text">
+                <a class="page-button" id="start-party"
+                   onclick="startParty()">Start a Party</a>
+                <a class="page-button" id="join-party"
+                   onclick="joinParty()">Join a Party</a>
+
+                <div id="player-container" class="player hide">
+                    <iframe src="https://open.spotify.com/embed?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A4J0Kk1yDli2DLjWipvXy0J" width="50%" height="75%" frameborder="0" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="footer">-->
+        <!--<footer>-->
+            <!--<div class="footer-container">-->
+                <!--&lt;!&ndash; <img class="footer-logo" src="/resources/images/AuxeoLogo.png"> &ndash;&gt;-->
+                <!--<ul class="footer-list">-->
+                    <!--<li class="footer-list-item" id="footer-title"><span>Pass The Aux</span></li>-->
+                    <!--<li class="footer-list-item"><a class="footer-link" href="mailto:info@auxeoinfluence.com">info@passtheaux.com</a>-->
+                    <!--</li>-->
+                    <!--<li class="footer-list-item" id="copyright"><span-->
+                            <!--class="footer-text">Pass The Aux &#169; 2019</span>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</footer>-->
+    <!--</div>-->
+</div>
+</body>
+</html>

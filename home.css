@@ -1,0 +1,225 @@
+body {
+    --light-text: #F7F5E9;
+    --light-text2: #EEEBD0;
+    --light-text1: #EDECED;
+    --dark-text: #363537;
+    --alt-text: #3A3042;
+    --teal: #22C1C3;
+    --mint: #3BB273;
+    --salmon: #E15554;
+    --banana: #FDBB2D;
+    --font-logo: "Montserrat", "Avenir LT Medium", Arial, "Trebuchet MS", sans-serif;
+    --font-light: "Avenir LT Light", Arial, "Trebuchet MS", sans-serif;
+    --font-med: "Avenir LT Medium", Arial, "Trebuchet MS", sans-serif;
+    --font-hev: "Avenir LT Heavy", Arial, "Trebuchet MS", sans-serif;
+    --font-alt: "Avenir LT Medium Oblique", Arial, "Trebuchet MS", sans-serif;
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    --hover-shadow: 0 21px 42px rgba(0, 0, 0, .25), 0 15px 15px rgba(0, 0, 0, .22);
+    --animate: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.page-focus-container {
+    background: rgb(34,193,195);
+    background: linear-gradient(315deg, rgba(34,193,195,1) 0%, rgba(59,178,115,1) 23%, rgba(253,187,45,1) 62%, rgba(225,85,84,1) 100%);
+}
+
+.main-section-text {
+    text-align: center;
+    padding-top: 25vh;
+    font-family: var(--font-med);
+    overflow: auto;
+    transition: var(--animate);
+}
+
+.section-title {
+    font-size: 10em;
+    font-weight: 300;
+    padding-top: 25vh;
+    color: var(--alt-text);
+    font-family: var(--font-logo);
+    transition: var(--animate);
+}
+
+.up-text {
+    padding-top: 7vh;
+}
+
+.up-title {
+    padding-top: 7vh !important;
+    font-size: 5em !important;
+}
+
+.up-subtitle {
+    font-size: 1.5em !important;
+}
+
+.section-subtitle {
+    font-size: 3em;
+    color: var(--dark-text);
+    font-family: var(--font-logo);
+    font-weight: 300;
+    transition: var(--animate);
+}
+
+/* Animation Library */
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.text-input {
+    transition: var(--animate);
+    cursor: text;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 1vw 4vh 1vw 4vh;
+    margin: 5vw 5vh 5vw 5vh;
+    border-radius: 50px;
+    font-family: var(--font-logo);
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.text-input::selection, .text-input:active, .text-input:focus {
+    box-shadow: var(--hover-shadow);
+    color: var(--light-text);
+    background: var(--dark-text);
+}
+
+.page-button {
+    box-shadow: var(--box-shadow);
+    transition: var(--animate);
+    cursor: pointer;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 1vw 4vh 1vw 4vh;
+    margin: 5vw 5vh 5vw 5vh;
+    border-radius: 50px;
+    font-family: var(--font-logo);
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+#start-party {
+    color: var(--salmon);
+    background: var(--teal);
+}
+
+#join-party {
+    color: var(--banana);
+    background: var(--teal);
+}
+
+.page-button:hover {
+    box-shadow: var(--hover-shadow);
+    color: var(--light-text);
+    background: var(--dark-text);
+}
+
+.section-body {
+    padding-top: 7vh;
+    overflow-wrap: break-word;
+    overflow-style: auto;
+    font-size: 3vh;
+    color: var(--light-text);
+    margin: 0;
+}
+
+#page-section-signup-split {
+    height: 82vh;
+}
+
+.page-split {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.split-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-clip: padding-box;
+    font-family: var(--font-med);
+    color: #FFFFFF;
+}
+
+#influencer-split {
+    background: url("/domains/mluckydwyer.com/auxeo/resources/images/Photographer.png") no-repeat;
+}
+
+#influencer-split-content {
+    background: rgba(84, 36, 136, 0.7);
+}
+
+#business-split {
+    background: url("/domains/mluckydwyer.com/auxeo/resources/images/Business.png") no-repeat;
+}
+
+#business-split-content {
+    background: rgba(0, 0, 115, 0.6);
+}
+
+.split-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: "Avenir LT Heavy", Arial, "Trebuchet MS", sans-serif;
+    font-size: 7vh;
+    padding: 10vh 0 2vh;
+}
+
+.split-subtitle {
+    font-size: 3.5vh;
+    font-family: "Avenir LT Medium Oblique", Arial, "Trebuchet MS", sans-serif;
+    padding-bottom: 20vh;
+}
+
+.split-body {
+    font-size: 3vh;
+    width: 70%;
+    overflow-wrap: break-word;
+    margin: 0 auto 0 auto;
+    padding-bottom: 15vh;
+}
+
+.split-button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    background: rgba(212, 122, 21, .8);
+    background-clip: padding-box;
+    cursor: pointer;
+    text-decoration: none;
+    padding: .5vw 1vw .5vw 1vw;
+    margin-top: 2.5vh;
+    font-family: "Avenir LT Light", Arial, "Trebuchet MS", sans-serif;
+    font-size: larger;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.split-button:hover {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .22);
+    background: rgba(239, 149, 0, 0.9);
+    border: none;
+}
