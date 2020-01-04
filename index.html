@@ -24,6 +24,8 @@
     <div class="content" id="home">
         <div class="page-section page-focus-container" id="page-section-face">
             <div id="mainText" class="main-section-text">
+                <a class="back-button hide" id="back-btn"
+                   onclick="transition('initial')">This is a test</a>
                 <span id="title" class="section-title">Pass The Aux</span>
                 <h3 id="subtitle" class="section-subtitle">Click, Play, Jam! 🎉</h3>
                 <!--<h1 class="ml6">-->
@@ -35,7 +37,9 @@
                 <a class="page-button" id="start-party"
                    onclick="startParty()">Start a Party</a>
                 <a class="page-button" id="join-party"
-                   onclick="joinParty()">Join a Party</a>
+                   onclick="enterPartyCode()">Join a Party</a>
+                <a class="spotify-login-button hide" id="spotify-login"
+                   onclick="login()">LOG INTO SPOTIFY</a>
 
                 <div id="player-container" class="player hide">
                     <iframe src="https://open.spotify.com/embed?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A4J0Kk1yDli2DLjWipvXy0J" width="50%" height="75%" frameborder="0" allow="encrypted-media"></iframe>

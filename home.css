@@ -223,3 +223,19 @@ body {
     background: rgba(239, 149, 0, 0.9);
     border: none;
 }
+
+.spotify-login-button {
+    border-radius: 500px;
+    color: #FFFFFF;
+    font-family: Open Sans, "Avenir LT Heavy", Arial, "Trebuchet MS", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    padding: 40px;
+    background-color: #1DB954;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.spotify-login-button:hover {
+    background-color: #1E62D0;
+}
