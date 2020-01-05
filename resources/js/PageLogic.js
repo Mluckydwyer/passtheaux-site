@@ -8,10 +8,19 @@ function startParty() {
 
     if (loggedInStatus === 'logged-in') {
         let player = document.getElementById("player-container");
-        exchangeAuthCode(spotifyAuthCode)
+        query = `
+            mutation {
+                createBasicParty(partyId: "house3", spotifyAuthCode: "` + spotifyAuthCode + `") {
+                    partyId
+                }
+            }
+        `;
+
+        queryGQL(query)
             .then(function (response) {
                 player.classList.remove("hide");
                 console.log(response);
+                console.log(response['data']['createBasicParty']['partyId']);
             })
             .catch(function (error) {
                 console.log(error);
@@ -121,35 +130,12 @@ function checkLogin() {
     }
 }
 
-// Exchange auth code for access and refresh tokens
-async function exchangeAuthCode(code) {
-    url = 'https://accounts.spotify.com/api/token';
-    redirect_url = 'http://localhost:63343/passtheaux-site/index.html';
-    client_id = '24031b8a9bfa48a198a98cc90158e16c';
-    client_secret = '';
-    //             'Authorization': 'Basic ' + btoa(client_id + ':' + client_secrete)
-
-    let response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic MjQwMzFiOGE5YmZhNDhhMTk4YTk4Y2M5MDE1OGUxNmM6OWRmM2UxNjY2ZDQ4NDZiYmI4YTY4ZmFmMDdkY2Q5MzQ=' //+ (new Buffer(client_id + ':' + client_secret).toString('base64'))
-        },
-        params: JSON.stringify({
-            'grant_type': 'authorization_code',
-            'code': code,
-            'redirect_uri': encodeURIComponent('http://localhost:63343/passtheaux-site/index.html')
-        })
-    });
-    return await response.json();
-}
-
 // Redirects user to Spotify login page to obtain authorization code
 function login() { // TODO add extra scope security
     response_type = 'response_type=code';
     client_id = '&client_id=24031b8a9bfa48a198a98cc90158e16c';
     redirect_uri = '&redirect_uri=' + encodeURIComponent('http://localhost:63343/passtheaux-site/index.html');
-    scope = '&scope=' + encodeURIComponent('user-read-private');
+    scope = '&scope=' + encodeURIComponent('user-read-private streaming playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private');
     state = '&state=happy123';
     url = 'https://accounts.spotify.com/authorize?' + response_type + client_id + scope + redirect_uri + state;
     //url = 'https://accounts.spotify.com/authorize?' + ;
